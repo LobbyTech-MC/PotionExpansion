@@ -75,8 +75,8 @@ public class PotionExpansion extends JavaPlugin implements SlimefunAddon {
     }
 
     public static @Nullable BukkitTask runSync(@Nonnull Runnable runnable, long delay) {
-        Validate.notNull(runnable, "Cannot run null");
-        Validate.isTrue(delay >= 0, "The delay cannot be negative");
+        Validate.notNull(runnable, "无法生效");
+        Validate.isTrue(delay >= 0, "延迟不能为负");
 
         if (instance == null || !instance.isEnabled()) {
             return null;
